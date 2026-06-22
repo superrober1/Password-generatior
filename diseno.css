@@ -23,7 +23,7 @@
 
 button{
     background-color: rgb(87, 156, 133);
-    margin: 60px 0px 60px 0px;
+    margin: 60px 0px 0px 0px;
     color: aliceblue;
     height: 50px;
     width: 200px;
@@ -31,9 +31,14 @@ button{
 
 }
 
-input{
-    background-color: rgb(76, 123, 160);
-}
+
+
+input[type="checkbox"]{
+    font-color:white;
+
+
+} 
+
 
 #caja{
     display: flex;

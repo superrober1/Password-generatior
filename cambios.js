@@ -48,9 +48,9 @@ function password() {
     if (bolsaDeCaracteres.length === 0) {
         alert("Por favor, selecciona al menos una casilla (Números o Símbolos).");
         return; // Termina la función inmediatamente
-    }
+    }113
 
-    // 📐 5. CAPTURA DE LONGITUD: Leemos cuántos caracteres quiere el usuario
+    // 📐 5. CAPTURA DE L-----------------------------------------------------------,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, ONGITUD: Leemos cuántos caracteres quiere el usuario
     let solicitud = Number(document.getElementById("restriccion").value);
 
     // 🔄 6. UN SOLO BUCLE PARA PASS1: Saca elementos al azar de la bolsa combinada
@@ -65,6 +65,7 @@ function password() {
         document.getElementById("pass2").value += bolsaDeCaracteres[perrito2];
     }
 }
+
 
 /*function password(){
 
@@ -86,7 +87,7 @@ if (document.getElementById ("soloNumeros").checked === true){ // si la casilla 
    for (let i=1; i<=solicitud2; i++){
     let perrito2= Math.floor(Math.random() * charNumeros.length);//numero al azar
     bolsaDeCaracteres = bolsaDeCaracteres.concat(charNumeros);// metemos a los numero en el string vacio
-    document.getElementById("pass2").value += bolsaDeCaracteres[perrito2];
+    document.getElementById("pass2").value += bolsaDeCaracteres[perrito2];cccc\\\\\\\\\\\\\\\\\\\\\\\\\\\\\//////////////////////////////////////////////-c
    }
 };
 

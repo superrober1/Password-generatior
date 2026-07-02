@@ -1,13 +1,3 @@
-const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U",
-    "V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t",
-    "u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%",
-    "^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
-"/"];
-
-const charLetras = characters.filter(char => /^[a-zA-Z]$/.test(char));
-const charNumeros = characters.filter(char => /^[0-9]$/.test(char));
-const charSimbolos = characters.filter (char =>!/^[a-zA-Z0-9]$/.test(char));
-
 
 
 
@@ -18,7 +8,6 @@ botonGenerador.addEventListener("click",password); // boton que activa el genera
 let botonLImpieza = document.getElementById("borrar");
 botonLImpieza.addEventListener("click",borrado);
 
-
 function borrado(){
     document.getElementById("restriccion").value = "";
     document.getElementById("pass1").value = "";
@@ -27,13 +16,18 @@ function borrado(){
 
 }
 
-function password() {
+
+
+
+
+
+
+ /*function password() { // FUNCIONABA CUANDO USABAMOS EL DOM PARA LA LOGICA, AHORA FUE AL SERVIDOR
     // 🧹 1. LIMPIEZA INICIAL: Vaciamos las cajas antes de empezar para que no se acumulen contraseñas viejas
     document.getElementById("pass1").value = "";
     document.getElementById("pass2").value = "";
 
-    // 📦 2. LA BOLSA DINÁMICA: Empezará vacía y guardará SOLO los caracteres permitidos
-    let bolsaDeCaracteres = [];
+  
 
     // 🚦 3. FILTROS INDEPENDIENTES: Llenamos la bolsa usando .concat()
     if (document.getElementById("soloNumeros").checked === true) {
@@ -48,9 +42,8 @@ function password() {
     if (bolsaDeCaracteres.length === 0) {
         alert("Por favor, selecciona al menos una casilla (Números o Símbolos).");
         return; // Termina la función inmediatamente
-    }113
-
-    // 📐 5. CAPTURA DE L-----------------------------------------------------------,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, ONGITUD: Leemos cuántos caracteres quiere el usuario
+    }
+    // 📐 5. CAPTURA DE LONGITUD: Leemos cuántos caracteres quiere el usuario
     let solicitud = Number(document.getElementById("restriccion").value);
 
     // 🔄 6. UN SOLO BUCLE PARA PASS1: Saca elementos al azar de la bolsa combinada
